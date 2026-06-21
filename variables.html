@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. Create a variable called `studentName` and store your name in it.
+        let studentName = "Ravsaheb Ashok Vagre";
+
+        // 2. Create a variable `age` and print it.
+        let age = 21;
+        console.log(age);
+
+        // 3. Create two variables and swap their values.
+        let a, b, c;
+        a = 10;
+        b = 20;
+        c = a; // 10
+        a = b; // 20
+        b = c; // 10
+        console.log(a, b); // 20 10
+
+        a = a + b; // 10 + 20 = 30
+        b = a - b; // 30 - 20 = 10
+        a = a - b; // 30 - 10 = 20
+
+        console.log(a, b); // 10 20
+
+        // 4. Create a constant variable for `PI` and print it.
+        const pi = Math.PI;
+        console.log(pi);
+        console.log(pi.toFixed(2));
+        console.log(typeof pi);
+
+        // 5. Declare a variable without assigning a value and print it.
+        let value;
+        console.log(value); // undefined
+
+        // 6. Create a variable `score` and increase it by 10.
+        let score = 0;
+        score += 10;
+        console.log(score);
+
+
+        // 7. Create three variables for first name, last name, and full name.
+        let firstName,fatherName, lastName, fullName;
+        firstName = "Ravsaheb";
+        fatherName = "Ashok";
+        lastName = "Vagre";
+        fullName = `${firstName} ${fatherName} ${lastName}`;
+        console.log(fullName);        
+
+    </script>
+</body>
+
+</html>

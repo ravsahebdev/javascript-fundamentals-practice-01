@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #0f172a;
+            color: #f8fafc;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: #1e293b;
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, .35);
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #38bdf8;
+            margin: 30px 0 15px;
+            font-size: 1.6rem;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            padding: 10px 15px;
+            margin: 10px 0;
+            background: #0f172a;
+            border-left: 4px solid #38bdf8;
+            border-radius: 8px;
+        }
+
+        strong {
+            color: #22c55e;
+        }
+
+        hr {
+            margin: 35px 0;
+            border: none;
+            height: 1px;
+            background: rgba(255, 255, 255, .1);
+        }
+
+        .author {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #94a3b8;
+        }
+
+        .author span {
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        @media (max-width:768px) {
+
+            body {
+                padding: 20px;
+            }
+
+            .container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            p,
+            li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1>📘 JavaScript Fundamentals – Assignment 01</h1>
+
+    <p>
+        Welcome to my JavaScript Fundamentals Practice repository.
+        This project contains multiple JavaScript practice exercises designed to improve
+        core programming concepts, logical thinking, and problem-solving skills.
+    </p>
+    <h2>🚀 Topics Covered</h2>
+    <ul>
+        <li>Variables</li>
+        <li>Data Types</li>
+        <li>Console Methods</li>
+        <li>Operators</li>
+        <li>Strings</li>
+        <li>Numbers & Math</li>
+        <li>Type Conversion & Coercion</li>
+        <li>Conditionals</li>
+        <li>Ternary Operator</li>
+        <li>Truthy & Falsy</li>
+        <li>Logical Thinking</li>
+        <li>Mixed Practice Questions</li>
+        <li>Challenge Questions</li>
+    </ul>
+    <h2>💻 How to Use</h2>
+    <p>
+        Open any HTML file in your browser and press
+        <strong>F12</strong> to open the Developer Console and view the program outputs.
+    </p>
+    <h2>🎯 Goal</h2>
+    <p>
+        The purpose of this repository is to strengthen JavaScript fundamentals through
+        consistent practice and real-world logical problem solving.
+    </p>
+    <hr>
+    <p><strong>Made with ❤️ by Ravsaheb Vagre</strong></p>
+</div>
+    <script>
+        // 1. Generate a random OTP of 4 digits.
+        let random = Math.floor(Math.random() * 9000) + 1000;
+        console.log(random);
+
+        // 2. Reverse a 3-letter string manually.
+        let s = "CAT";
+        // console.log(s.split('').reverse().join(''));
+        console.log(s[2] + s[1] + s[0]);
+
+        // 3. Find the last character of a string.
+        let str = "JavaScript";
+        console.log(str.slice(-1));
+
+        // 4. Convert a full name into uppercase initials.
+        let fullName = "Ravsaheb Ashok Vagre";
+        let init = fullName.split(' ');
+        console.log(init[0][0].toUpperCase() + init[1][0].toUpperCase() + init[2][0].toUpperCase());
+
+        // 5. Check whether two strings are equal ignoring case sensitivity.
+        let case1 = "JavaScript";
+        let case2 = "javascript";
+        console.log(case1.toLowerCase() === case2.toLowerCase());
+
+        // 6. Create a simple login validation system.
+        let userName = "ravsaheb";
+        let userPass = "1234";
+        function user(userName, userPass) {
+            if (userName === "ravsaheb" && userPass === "1234") return "Login";
+            return "User not found";
+        }
+        console.log(user("ravsaheb", "1234"));
+        console.log(user("ravsaheb", "1233"));
+
+        // 7. Find whether a number is a 2-digit or 3-digit number.
+        function digit(num) {
+            // num = temp;
+            let count = 0;
+            while (num > 0) {
+                num = Math.floor(num / 10);
+                count++;
+            }
+            if (count === 2) return "2 digit number";
+            else if (count === 3) return "3 digit number";
+            return "...."
+
+        }
+
+        console.log(digit(12));
+        console.log(digit(123));
+
+        // 8. Create a mini ATM balance checker.
+        let balance = 100000000000000000000000000000000000000n;
+        let withdraw = 100000n;
+        if (balance >= withdraw) {
+            balance -= withdraw;
+            console.log("Withdraw Successful:", balance);
+        } else {
+            console.log("Bank me paise nahi hai");
+        }
+
+        // 9. Simulate a traffic light system using `switch`.
+        let trafficLight = 2;
+        switch (trafficLight) {
+            case 1: console.log("Red Light");
+                break;
+            case 2: console.log("Yellow Light");
+                break;
+            case 3: console.log("Green Light");
+                break;
+            default: console.log("Enter a valid number");
+        }
+
+        // 10. Build a small marksheet generator using variables and conditionals.
+        let studentName, totalMarks, percentage, grade, result;
+        studentName = "Ravsaheb";
+        html = 90;
+        css = 98;
+        javaScript = 100;
+        mongoDb = 97;
+        expressJs = 99;
+        react = 100;
+        nodeJs = 100;
+
+        totalMarks = html + css + javaScript + mongoDb + expressJs + react + nodeJs;
+        result = null;
+        grade = null;
+        percentage = (totalMarks / 700) * 100;
+
+        if (percentage > 90 && percentage <= 100) { grade = "A Grade"; result = true; }
+        else if (percentage > 80) { grade = "B Grade"; result = true; }
+        else if (percentage > 60) { grade = "C Grade"; result = true; }
+        else { grade = "Fail"; result = false; }
+
+        let marksheet = `
+Name: ${studentName}
+Total Marks: ${totalMarks}
+Percentage: ${percentage.toFixed(2)}
+Grade: ${grade}
+Result: ${result ? "Pass" : "Fail"}
+        `
+        console.log(marksheet);
+
+    </script>
+</body>
+
+</html>

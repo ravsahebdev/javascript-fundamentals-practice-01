@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. Take two numbers and print which one is greater.
+        let a = 10;
+        let b = 20;
+        console.log(a > b ? "A is Greater" : "B is Greater");
+
+        // 2. Check whether a number lies between 10 and 50.
+        console.log(a >= 10 && a <= 50 ? "true" : "false");
+
+        // 3. Check whether a password length is greater than 8.
+        let str = "KhichadiBhajje";
+        console.log(str.length > 8 ? "Password is too long" : "Password is normal length");
+
+        // 4. Check if a person can drive:
+        // - age > 18
+        // - has license = true
+        let age = 21;
+        let license = true;
+        console.log(age >= 18 && license ? "You can drive" : "You can not drive");
+
+        // 1. Check whether a number is divisible by 2, 3, or both.
+        let num = 18;
+        console.log(num % 2 === 0 && num % 3 == 0 ?
+            "Number is divisible by both 2 and 3" :
+            num % 2 === 0 ? "Number is divisible by 2" :
+                num % 3 === 0 ? "Number is divisible by 3" :
+                    "Not divisible by 2 or 3");
+
+        // 2. Print `"Good Morning"`, `"Good Afternoon"`, or `"Good Evening"` based on time.
+        let time = 10; // 24 hour format
+        if (time >= 5 && time < 12) {
+            console.log("Good Morning");
+        } else if (time >= 12 && time < 17) {
+            console.log("Good Afternoon");
+        } else {
+            console.log("Good Evening");
+        }
+
+        // 3. Find whether a number is a multiple of 10.
+        let mul = 50;
+        console.log(mul % 10 === 0 ? "Number is a multiple of 10" : "Number is not a multiple of 10");
+
+        // 4. Create a simple discount calculator.
+        function discount(amount, dis) {
+            let finalPrice = amount - (amount * dis / 100);
+            return "Final Price: ", finalPrice;
+        }
+        
+        console.log(discount(1000, 20));
+
+        // 5. Check whether a product is in stock.
+        let inStock = true;
+        console.log(inStock ? "Product is available" : "Product is out of stock");
+
+        // 6. Calculate final bill after GST.
+        function finalBill(amount, gst) {
+            let total = amount + (amount * gst / 100);
+            return "Total Bill: ", total;
+        }
+        
+        console.log(finalBill(1000, 18));
+
+    </script>
+</body>
+
+</html>

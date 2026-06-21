@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. Create a mini biodata program using variables and template literals.
+        let fullName, age, dob, gender, maritalStatus, nationality;
+        fullName = "Ravsaheb Ashok Vagre";
+        age = 21;
+        dob = "06-09-2004";
+        gender = "Male";
+        maritalStatus = "Unmarid";
+        nationality = "India";
+
+        let biodata =
+            `My full name is ${fullName} &
+my age is ${age} years old & 
+my date of birth is ${dob} & 
+my gender is ${gender} & 
+my marital status is ${maritalStatus} & 
+my nationality is ${nationality}`;
+        console.log(biodata);
+
+        // 2. Calculate the area of a rectangle.
+        let recLength = 10;
+        let recWidth = 20;
+        let area = recLength * recWidth;
+        console.log(area);
+
+        // 3. Calculate the simple interest.
+        // P = Principal(मूल धन)
+        // R = Rate(ब्याज दर % में)
+        // T = Time(समय, वर्षों में)
+        // 𝑆𝐼 = 𝑃×𝑅×𝑇 / 100
+        let principal = 10000;
+        let rate = 10; // % 
+        let time = 2; // years
+        let simpleInterest = (principal * rate * time) / 100;
+        console.log(simpleInterest);
+
+        // 4. Convert temperature from Celsius to Fahrenheit.
+        let celsius = 40;
+        let fahrenheit = (celsius * 9 / 5) + 32;
+        console.log(fahrenheit);
+
+        // 5. Convert kilometers into meters.
+        let kilometers = 2;
+        let meters = kilometers * 1000;
+        console.log(meters + "m");
+
+        // 6. Calculate total marks and percentage of 5 subjects.
+        function calculate(marathi, english, science, math, history) {
+            let marks = marathi + english + science + math + history;
+            let percentage = (marks / 500) * 100;
+            return [marks, percentage];
+        }
+        console.log(calculate(90, 93, 98, 94, 99));
+
+        // 7. Calculate electricity bill based on units consumed.
+        function bill(unit) {
+            if (unit > 0 && unit <= 100) {
+                return unit * 5;
+            } else if (unit > 100 && unit <= 200) {
+                return (100 * 5) + (unit - 100) * 7;
+            } else {
+                return (100 * 5) + (100 * 7) + (unit - 200) * 10;
+            }
+        }
+        console.log(bill(150));
+        console.log(bill(250));
+
+        // 8. Create a username generator using first name and birth year.
+        let name = "Ravsaheb";
+        let birth = "06-09-2004";
+        let username = `${name.toLowerCase()}${birth.slice(-4)}`;
+        console.log(username);
+
+        // 9. Check whether a string starts with a specific letter.
+        let str = "JavaScript";
+        let first = str[0] === "J";
+        console.log(str.startsWith("J")); // true
+        console.log(first); // true
+
+        // 10. Count the total characters in a sentence excluding spaces.
+        let sentence = "Hi i'm Ravsaheb and i'm learning FSWD";
+        let space = sentence.replaceAll(" ", "");
+        console.log(space.length);
+    </script>
+</body>
+
+</html>

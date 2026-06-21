@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. Convert the string `"50"` into a number.
+        let str = "50";
+        console.log(Number(str));
+
+        // 2. Convert the number `100` into a string.
+        let num = 100;
+        console.log(num.toString());
+
+        // 3. Convert `"true"` into a boolean.
+        let tr = "true";
+        console.log(tr === "true"); // true
+
+        // 4. Check the output of:
+        // - `"5" + 2`
+        console.log("5" + 2); // 52
+
+        // - `"5" - 2`
+        console.log("5" - 2); // 3
+
+        // - `true + 1`
+        console.log(true + 1); // 2
+
+        // 1. Create a variable with value `"123abc"` and convert it into a number.
+        let value = "123abc";
+        console.log(Number(value)); // NaN
+        console.log(parseInt(value)); // 123
+
+        // 2. Use `parseInt()` on `"500px"`.
+        let px = "500px";
+        console.log(parseInt(px)); // 500
+
+        let s = "222rav456";
+        console.log(parseInt(s)); // 222
+
+    </script>
+</body>
+
+</html>
